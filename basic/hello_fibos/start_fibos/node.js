@@ -3,7 +3,9 @@ var fibos = require('fibos');
 fibos.load("http", {
     "http-server-address": "0.0.0.0:8888"
 });
-fibos.load("chain");
+fibos.load('chain', {
+    'delete-all-blocks': true
+});
 fibos.load("net", {
     "p2p-listen-endpoint": "0.0.0.0:9876"
 });
